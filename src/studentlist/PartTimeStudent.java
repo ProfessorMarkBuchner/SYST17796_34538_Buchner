@@ -2,7 +2,7 @@ package studentlist;
 
 /**
  *
- * @author markb
+ * @author markb Jan 27 2021
  */
 public class PartTimeStudent extends Student{
     private int numCourses;
