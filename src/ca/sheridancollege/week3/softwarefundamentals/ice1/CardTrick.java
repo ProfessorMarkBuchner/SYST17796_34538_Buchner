@@ -33,31 +33,14 @@ public class CardTrick {
             System.out.println(magicHand[i].getValue()+" of "+magicHand[i].getSuit());
         }
         
-//         Scanner scan = new Scanner(System.in);
-//         System.out.println("Enter a value between 1 to 13");
-//         int userValue = scan.nextInt();
-//         System.out.println("Enter a suit");
-//         String userSuit = scan.next();
-//         int success = 0;
-        
-//         for(Card c : magicHand){
-//             if( userValue==c.getValue()  &&  userSuit==c.getSuit()){
-//                 success++;
-//             }
-//             //System.out.println(c.getValue()+" of " +c.getSuit());
-//         }
-//         if(success==0){
-//             System.out.println("Sorry wrong pick");
-//         }
-//         else
-//                 System.out.println("congrats");
+
         Card luckyCard = new Card();
         luckyCard.setSuit(Card.SUITS[3]); //clubs
         luckyCard.setValue(8); //card value 8
         int success = 0;
         
         for(Card c : magicHand){
-         if(c.getValue() == luckyCard.getValue && c.getSuit() == luckyCard.getSuit){
+         if(c.getValue() == luckyCard.getValue() && c.getSuit() == luckyCard.getSuit()){
           success++;   
          }
         }
