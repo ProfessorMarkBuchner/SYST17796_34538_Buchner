@@ -49,6 +49,8 @@ public class CardTrick {
             System.out.println("The card exists in magic hand");
         else
             System.out.println("The card doesn't exist in magic hand");
+        
+        Card luckyCard = new Card("Spades", 10);
     }
 
     private static Card getRandomCard() {
