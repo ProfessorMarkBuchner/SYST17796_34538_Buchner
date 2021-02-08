@@ -32,9 +32,9 @@ public class CardTrick {
 
         Card luckyCard = new Card("Spades", 10);
         if(checkCardExistsInMagicHand(luckyCard, magicHand))
-            System.out.println("The card exists in magic hand");
+            System.out.println("You won! The card exists in magic hand");
         else
-            System.out.println("The card doesn't exist in magic hand");
+            System.out.println("You lost! The card doesn't exist in magic hand");
         
         
     }
