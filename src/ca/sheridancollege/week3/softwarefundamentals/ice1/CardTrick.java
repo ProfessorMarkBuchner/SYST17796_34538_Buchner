@@ -1,8 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Modifier: Roopali kanwar
+ * 
+ * Student Number: 991624561
  */
+
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
 
 /**
@@ -17,16 +18,36 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         
-        for (int i=0; i<magicHand.length; i++)
-        {
-            Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+        int count = 0;
+        while(count<7) {
+            Card card = getRandomCard();
+            boolean exists = checkCardExistsInMagicHand(card, magicHand);
+            if(!exists) {
+                magicHand[count] = card;
+                count++;
+            }
         }
-        
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+                
+        for(int i=0; i<magicHand.length; i++){
+            System.out.println(magicHand[i]);
+        }
+
+    }
+
+    private static Card getRandomCard() {
+        int value = (int)(Math.random()*13)+1;
+        String suit = Card.SUITS[(int)(Math.random()*4)];
+        Card card = new Card(suit, value);
+        return card;
+    }
+
+    private static boolean checkCardExistsInMagicHand(Card card, Card[] magicHand) {
+        for(int i=0; i<magicHand.length; i++){
+            if(magicHand[i]!=null && magicHand[i].getValue() == card.getValue() && magicHand[i].getSuit().equals(card.getSuit())) {
+                return true;
+            }
+        }
+        return false;
     }
     
 }

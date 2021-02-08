@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Modifier: Roopali kanwar
+ * 
+ * Student Number: 991624561
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
 
@@ -23,6 +23,13 @@ public class Card {
     /**
      * @return the suit
      */
+   
+    public Card (String suit, int value){
+    
+        this.suit = suit;
+        this.value = value;
+    }
+    
     public String getSuit() {
         return suit;
     }
@@ -46,6 +53,11 @@ public class Card {
      */
     public void setValue(int value) {
         this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return "Value:" + this.value + " | " + "Suit:" + this.suit;
     }
    
    
