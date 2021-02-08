@@ -1,8 +1,4 @@
 /*
- * Modifier: Roopali kanwar
- * 
- * Student Number: 991624561
- */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
 
 /**
@@ -13,6 +9,10 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
  * @author dancye
+ * 
+ * Modifier: Roopali Kanwar
+ * Student Number: 991624561
+ * Date: Feb 07, 2021
  */
 public class Card {
 

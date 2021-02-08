@@ -1,9 +1,3 @@
-/*
- * Modifier: Roopali kanwar
- * 
- * Student Number: 991624561
- */
-
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
 
 import java.util.Scanner;
@@ -13,6 +7,10 @@ import java.util.Scanner;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
+ * 
+ * Modifier: Roopali Kanwar
+ * Student Number: 991624561
+ * Date: Feb 07, 2021
  */
 public class CardTrick {
     
