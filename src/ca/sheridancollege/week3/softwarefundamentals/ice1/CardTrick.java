@@ -28,24 +28,22 @@ public class CardTrick {
             magicHand[i]=c;
             
         }
-        Scanner k= new Scanner(System.in);
-        System.out.println("Enter number between 1-13: ");
-        int num= k.nextInt();
-        System.out.println("Enter the suit: ");
-        String suit= k.next();
-        boolean check=false;
-        for (Card c: magicHand) {
-            if(c.getValue()==num)
-                check=true;
-            
+
+        Card luckyCard = new Card();
+        luckyCard.setSuit(Card.SUITS[1]); // Diamonds
+        luckyCard.setValue(5); // Card Value 5 as input
+        boolean check = false;
+        
+        for(Card c : magicHand){
+         if(c.getValue() == luckyCard.getValue() && c.getSuit() == luckyCard.getSuit()){
+          check=true;   
+         }
         }
-        if (check==true) 
-            System.out.println("MAGIC! You won.");
+        if(check==false){
+             System.out.println("You lost :(");
+        }
         else
-            System.out.println("You lost.");
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+                System.out.println("You won!");
     }
     
 }
