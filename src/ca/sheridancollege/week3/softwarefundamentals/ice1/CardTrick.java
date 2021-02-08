@@ -28,25 +28,45 @@ public class CardTrick {
             c.setSuit(Card.SUITS[randomSuit]);
             magicHand[i]=c;
         }
+        System.out.println("Magic Hand of seven cards is: ");
+        for(int i=0; i< magicHand.length; i++){
+            System.out.println(magicHand[i].getValue()+" of "+magicHand[i].getSuit());
+        }
         
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter a value between 1 to 13");
-        int userValue = scan.nextInt();
-        System.out.println("Enter a suit");
-        String userSuit = scan.next();
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter a value between 1 to 13");
+//         int userValue = scan.nextInt();
+//         System.out.println("Enter a suit");
+//         String userSuit = scan.next();
+//         int success = 0;
+        
+//         for(Card c : magicHand){
+//             if( userValue==c.getValue()  &&  userSuit==c.getSuit()){
+//                 success++;
+//             }
+//             //System.out.println(c.getValue()+" of " +c.getSuit());
+//         }
+//         if(success==0){
+//             System.out.println("Sorry wrong pick");
+//         }
+//         else
+//                 System.out.println("congrats");
+        Card luckyCard = new Card();
+        luckyCard.setSuit(Card.SUITS[3]); //clubs
+        luckyCard.setValue(8); //card value 8
         int success = 0;
         
         for(Card c : magicHand){
-            if( userValue==c.getValue()  &&  userSuit==c.getSuit()){
-                success++;
-            }
-            //System.out.println(c.getValue()+" of " +c.getSuit());
+         if(c.getValue() == luckyCard.getValue && c.getSuit() == luckyCard.getSuit){
+          success++;   
+         }
         }
         if(success==0){
-            System.out.println("Sorry wrong pick");
+             System.out.println("Sorry you lost");
         }
         else
-                System.out.println("congrats");
+                System.out.println("congrats you won!");
+        
         
        
                
