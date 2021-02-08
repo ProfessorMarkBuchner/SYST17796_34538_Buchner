@@ -30,27 +30,13 @@ public class CardTrick {
             }
         }
 
-        System.out.println("Pick any card");
-        System.out.println("Enter 1 for Hearts");
-        System.out.println("Enter 2 for Diamonds");
-        System.out.println("Enter 3 for Spades");
-        System.out.println("Enter 4 for Clubs");
-        
-        Scanner scanner = new Scanner(System.in);
-        String suitIndex = scanner.nextLine();
-        String suit = Card.SUITS[Integer.parseInt(suitIndex)-1];
-        
-        System.out.println("Enter a number between 1 to 13");
-        String valueString = scanner.nextLine();
-        int value = Integer.parseInt(valueString);
-        
-        Card userCard = new Card(suit, value);
-        if(checkCardExistsInMagicHand(userCard, magicHand))
+        Card luckyCard = new Card("Spades", 10);
+        if(checkCardExistsInMagicHand(luckyCard, magicHand))
             System.out.println("The card exists in magic hand");
         else
             System.out.println("The card doesn't exist in magic hand");
         
-        Card luckyCard = new Card("Spades", 10);
+        
     }
 
     private static Card getRandomCard() {
