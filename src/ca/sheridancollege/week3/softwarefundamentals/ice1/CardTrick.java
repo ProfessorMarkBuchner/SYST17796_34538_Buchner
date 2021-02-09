@@ -43,6 +43,10 @@ public class CardTrick {
         System.out.print("Enter a suit (Clubs, Spades, Diamonds, Hearts): ");
         String usrCardSuit=kb.next();
         usrCard.setSuit(usrCardSuit);
+        
+        final Card luckCard= new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit(Card.SUITS[1]);
 
         int cardMatch=0;
 
