@@ -9,7 +9,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * A suit (clubs, hearts, spades, diamonds).
  * There are 52 cards in a deck, no jokers.
  * This code is to be used in ICE1. When you create your own branch,
- * Modified by Khang Tran.
+ * Modified by Khang Tran on Feb 9, 2020
  * @author dancye
  */
 public class Card {
