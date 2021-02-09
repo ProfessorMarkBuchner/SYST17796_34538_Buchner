@@ -11,6 +11,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * This code is to be used in ICE1. When you create your own branch,
  * @modifier Nicole Sheppard
  * @author dancye
+ * @date February 9th, 2021
  */
 public class Card {
 

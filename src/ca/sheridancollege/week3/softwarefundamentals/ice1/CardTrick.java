@@ -10,6 +10,7 @@ import java.util.Scanner;
  * for the match to the user's card. To be used as starting code in ICE 1
  * @modifier Nicole Sheppard
  * @author dancye
+ * @date February 9th, 2021
  */
 public class CardTrick {
     
