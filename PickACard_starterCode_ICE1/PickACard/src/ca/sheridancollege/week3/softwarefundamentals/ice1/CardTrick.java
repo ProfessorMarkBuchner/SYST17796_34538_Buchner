@@ -93,6 +93,7 @@ public class CardTrick {
         Card luckyCard = new Card(); 
         luckyCard.setValue(1);
         luckyCard.setSuit("Spades"); 
+        System.out.println("I hardcoded luckyCard value of " +luckyCard.getValue() + " and of suit " + luckyCard.getSuit());
         
         //search magicHand here
         boolean isFound = false;
