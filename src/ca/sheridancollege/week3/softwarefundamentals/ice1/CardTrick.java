@@ -31,6 +31,7 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
+        /* This user input is replaced with hard-coded luckyCard
         //insert code to ask the user for Card value and suit, create their card
         Scanner input = new Scanner(System.in);
         int cValue = 0;
@@ -66,6 +67,21 @@ public class CardTrick {
                 break;
             }
         }  
+        */
+        
+        //replacing user input with luckyCard
+        Card luckyCard = new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit(Card.SUITE[1]);
+        
+        //search magicHand for my lucky card
+        boolean isWinner = false;
+        for (Card c: magicHand) {
+            if (c.getValue() == luckyCard.getValue() && c.getSuit().equals(luckyCard.getSuit())) {
+                isWinner = true;
+                break;
+            }
+        }
         
         //Then report the result here
         if (isWinner) {
