@@ -31,8 +31,6 @@ public class CardTrick {
              c.setSuit(Card.SUITS[cardSuit]);
              magicHand[i]=c;
         }
-
-        //insert code to ask the user for Card value and suit, create their card
         
         final Card luckyCard= new Card();
         luckyCard.setValue(7);
