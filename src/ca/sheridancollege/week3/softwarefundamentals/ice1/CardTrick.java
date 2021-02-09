@@ -56,12 +56,28 @@ public class CardTrick {
         
         System.out.println("You chose " + userValue + " of " + userSuit);
         
+        
+        boolean match = false;
+        
         for (int i = 0; i < magicHand.length; i++)
         {
             if (userValue == magicHand[i].getValue())
             {
                 if (userSuit.equalsIgnoreCase(magicHand[i].getSuit()))
+                {
+                    match = true;
+                }
             }
+            System.out.println("Magic hand card #" + (i+1) + " is: " + magicHand[i].getValue() + " of " + magicHand[i].getSuit());
+        }
+        
+        if (match == false)
+        {
+            System.out.println("Your card is not in the magic hand");
+        }
+        else if (match == true)
+        {
+            System.out.println("Your card is in the magic hand");
         }
     }
     
