@@ -37,37 +37,38 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
-        //get user input for card number
-        System.out.print("Pick a card number (1 to 13): ");
-        int userValue = input.nextInt();
-        while (userValue < 1 || userValue > 13)
-        {
-            System.out.print("Invald card number. Pick a card number (1 to 13): ");
-            userValue = input.nextInt();
-        }
+//        //get user input for card number
+//        System.out.print("Pick a card number (1 to 13): ");
+//        int userValue = input.nextInt();
+//        while (userValue < 1 || userValue > 13)
+//        {
+//            System.out.print("Invald card number. Pick a card number (1 to 13): ");
+//            userValue = input.nextInt();
+//        }
+//        
+//        //get user input for card suit
+//        System.out.print("Pick a card suit (hearts, diamonds, spades, clubs): ");
+//        String userSuit = input.next();
+//        while (!userSuit.equalsIgnoreCase("hearts") &&
+//               !userSuit.equalsIgnoreCase("diamonds") &&
+//               !userSuit.equalsIgnoreCase("spades") &&
+//               !userSuit.equalsIgnoreCase("clubs"))
+//        {
+//            System.out.print("Invalid suit. Pick a card suit (hearts, diamonds, spades, clubs): ");
+//            userSuit = input.next();
+//        }
+//        
+//        System.out.println("You chose " + userValue + " of " + userSuit);
         
-        //get user input for card suit
-        System.out.print("Pick a card suit (hearts, diamonds, spades, clubs): ");
-        String userSuit = input.next();
-        while (!userSuit.equalsIgnoreCase("hearts") &&
-               !userSuit.equalsIgnoreCase("diamonds") &&
-               !userSuit.equalsIgnoreCase("spades") &&
-               !userSuit.equalsIgnoreCase("clubs"))
-        {
-            System.out.print("Invalid suit. Pick a card suit (hearts, diamonds, spades, clubs): ");
-            userSuit = input.next();
-        }
-        
-        System.out.println("You chose " + userValue + " of " + userSuit);
-        
+        System.out.println("Your card is " + luckyCard.getValue() + " of " + luckyCard.getSuit());
         //variable to track if user card matches magic hand card
         boolean match = false;
         //loop to check if there is a matching card
         for (int i = 0; i < magicHand.length; i++)
         {
-            if (userValue == magicHand[i].getValue())
+            if (luckyCard.getValue() == magicHand[i].getValue())
             {
-                if (userSuit.equalsIgnoreCase(magicHand[i].getSuit()))
+                if (luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit()))
                 {
                     match = true;
                 }
