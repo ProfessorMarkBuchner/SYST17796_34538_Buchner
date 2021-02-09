@@ -18,8 +18,10 @@ public class CardTrick {
     {
         Scanner input = new Scanner(System.in);
         
+        //array for 7 cards magic hand
         Card[] magicHand = new Card[7];
         
+        //loop to create array of card objects
         for (int i = 0; i < magicHand.length; i++)
         {
             Card c = new Card();
@@ -28,10 +30,6 @@ public class CardTrick {
             
             magicHand[i] = c;
         }
-        
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
         
         //get user input for card number
         System.out.print("Pick a card number (1 to 13): ");
@@ -56,9 +54,9 @@ public class CardTrick {
         
         System.out.println("You chose " + userValue + " of " + userSuit);
         
-        
+        //variable to track if user card matches magic hand card
         boolean match = false;
-        
+        //loop to check if there is a matching card
         for (int i = 0; i < magicHand.length; i++)
         {
             if (userValue == magicHand[i].getValue())
@@ -71,6 +69,7 @@ public class CardTrick {
             System.out.println("Magic hand card #" + (i+1) + " is: " + magicHand[i].getValue() + " of " + magicHand[i].getSuit());
         }
         
+        //output match or not
         if (match == false)
         {
             System.out.println("Your card is not in the magic hand");
