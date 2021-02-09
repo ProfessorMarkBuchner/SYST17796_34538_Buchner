@@ -44,27 +44,23 @@ public class CardTrick {
         
         //insert code to ask the user for Card value and suit, create their card
         Scanner input = new Scanner(System.in);
-        Card luckyCard = new Card[];
-        
-        System.out.print("Enter a Card Value (1-13)");
-        int cardValue = input.nextInt();
-        System.out.print("Enter a suit [Hearts-0,Diamonds-1,Spades-2,Clubs-3]");
-        int cardSuit = input.nextInt();
-        
-        Card c1= new Card();
-        c1.setValue(cardValue);
-        c1.setSuit(Card.SUITS[cardSuit]);
+       Card luckyCard = new Card();
+       
+       luckyCard.setSuit(Card.SUITS[3]);
+       luckyCard.setValue(10);
         
         
         // and search magicHand here
         for(int i = 0 ; i<magicHand.length;i++){
-            if(magicHand[i].getValue()== c1.getValue()&& magicHand[i].getSuit().equals(c1.getSuit()) ){
+            if(magicHand[i].getValue()== luckyCard.getValue()&& magicHand[i].getSuit().equals(luckyCard.getSuit()) ){
                 //Then report the result here
              
-                System.out.println("The card is found in the magic Hand");
-            }else{
+                System.out.println("Congratulation ,The card is found in the magic Hand" + " "+ luckyCard.getValue());
+                break;
+            }else if(i== magicHand.length-1){
             
             System.out.println("Sorry the card is not found in the magic Hand");
+            System.out.println("Lucky Card was : " + luckyCard.getSuit()+" "+luckyCard.getValue());
             }
         }
 }}
