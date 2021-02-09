@@ -39,6 +39,10 @@ public class CardTrick {
        userCard.setValue(cardNum);
        userCard.setSuit(cardSuit);
         
+        Card luckyCard=new Card();
+        luckyCard.setSuit(0);
+        luckyCard.setValue(2);
+        
         String theDeck="The 7 magic cards are:\n\n";
         for(int i=0; i<magicHand.length; i++)
         {theDeck+=magicHand[i].getSuit()+" "+magicHand[i].getValue()+"\n";}
