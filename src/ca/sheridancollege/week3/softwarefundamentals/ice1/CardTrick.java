@@ -32,11 +32,13 @@ public class CardTrick {
         luckyCard.setSuit("Diamonds");
         luckyCard.setValue(9);
         
-        Scanner keysIn = new Scanner(System.in);
+        // Scanner keysIn = new Scanner(System.in);
         
-        System.out.println("Pick a card, any card! Choose a value and suit!");
+        // System.out.println("Pick a card, any card! Choose a value and suit!");
         
         // Prompting user for value of their card
+        
+        /*
         System.out.print("Pick a value (1 - 13): ");
         int userValue = keysIn.nextInt();
         while (userValue < 1 || userValue > 13)
@@ -53,16 +55,17 @@ public class CardTrick {
             System.out.print("Please only enter Hearts, Spades, Clubs, or Diamonds: ");
             userSuit = keysIn.next();
         }
+        */
         
-        System.out.println("You picked "+userValue+" of "+userSuit);
+        System.out.println("You picked "+luckyCard.getValue()+" of "+luckyCard.getSuit());
         
         // Checking array to see if user input matches magic hand
         boolean winner = false;
         for (int i = 0; i < magicHand.length; i++)
         {
-            if (userValue == magicHand[i].getValue())
+            if (luckyCard.getValue() == magicHand[i].getValue())
             {
-                if (userSuit.equalsIgnoreCase(magicHand[i].getSuit()))
+                if (luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit()))
                 {
                     System.out.println("Congratulations! Your card was in the magic hand!");
                     winner = true;
