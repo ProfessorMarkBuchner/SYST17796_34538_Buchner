@@ -74,15 +74,6 @@ public class CardTrick {
         luckyCard.setValue(7);
         luckyCard.setSuit(Card.SUITE[1]);
         
-        //search magicHand for my lucky card
-        boolean isWinner = false;
-        for (Card c: magicHand) {
-            if (c.getValue() == luckyCard.getValue() && c.getSuit().equals(luckyCard.getSuit())) {
-                isWinner = true;
-                break;
-            }
-        }
-        
         //Then report the result here
         if (isWinner) {
             System.out.println("Congratulations!  You picked a winning card.");
