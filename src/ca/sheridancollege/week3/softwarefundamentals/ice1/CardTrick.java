@@ -27,6 +27,11 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
+        // luckyCard object
+        Card luckyCard = new Card();
+        luckyCard.setSuit("Diamonds");
+        luckyCard.setValue(9);
+        
         Scanner keysIn = new Scanner(System.in);
         
         System.out.println("Pick a card, any card! Choose a value and suit!");
@@ -71,6 +76,7 @@ public class CardTrick {
         {
             System.out.println("Your card was not in the magic hand.");
         }
+        
     }
     
 }
