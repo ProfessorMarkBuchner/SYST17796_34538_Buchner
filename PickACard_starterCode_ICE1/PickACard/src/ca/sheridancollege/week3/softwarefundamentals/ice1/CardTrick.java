@@ -13,6 +13,8 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  */
 public class CardTrick {
     
+    //test merge 1234
+    
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
