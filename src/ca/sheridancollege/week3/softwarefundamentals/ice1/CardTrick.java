@@ -33,30 +33,19 @@ public class CardTrick {
         }
 
         //insert code to ask the user for Card value and suit, create their card
-
-        Card usrCard= new Card();
-
-        System.out.print("Enter a number between 1-13: ");
-        int usrCardNum=kb.nextInt();
-        usrCard.setValue(usrCardNum);
-
-        System.out.print("Enter a suit (Clubs, Spades, Diamonds, Hearts): ");
-        String usrCardSuit=kb.next();
-        usrCard.setSuit(usrCardSuit);
         
-        final Card luckCard= new Card();
+        final Card luckyCard= new Card();
         luckyCard.setValue(7);
         luckyCard.setSuit(Card.SUITS[1]);
 
         int cardMatch=0;
 
         for(int i=0;i< magicHand.length;i++){
-            if(usrCard.getValue()==magicHand[i].getValue() && usrCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit())){
+            if(luckyCard.getValue()==magicHand[i].getValue() && luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit()))
                 cardMatch++;
-            }
         }
         if(cardMatch==0)
-        System.out.println("\nYour card was not in the card hand!");
+            System.out.println("\nYour card was not in the card hand!");
         else
             System.out.println("\nYour card was in the card hand! Well done :)");
     }
