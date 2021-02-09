@@ -72,7 +72,16 @@ public class CardTrick {
         //replacing user input with luckyCard
         Card luckyCard = new Card();
         luckyCard.setValue(7);
-        luckyCard.setSuit(Card.SUITE[1]);
+        luckyCard.setSuit(Card.SUITS[1]);
+        
+        //search magicHand for my luckyCard
+        boolean isWinner = false;
+        for (Card c: magicHand) {
+            if (c.getValue() == luckyCard.getValue() && c.getSuit().equals(luckyCard.getSuit())) {
+                isWinner = true;
+                break;
+            }
+        }  
         
         //Then report the result here
         if (isWinner) {
