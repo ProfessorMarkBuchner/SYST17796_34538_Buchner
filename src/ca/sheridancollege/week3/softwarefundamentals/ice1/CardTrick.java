@@ -65,4 +65,4 @@ public class CardTrick {
             System.out.println("Sorry the card is not found in the magic Hand");
             }
         }
-}
+}}
