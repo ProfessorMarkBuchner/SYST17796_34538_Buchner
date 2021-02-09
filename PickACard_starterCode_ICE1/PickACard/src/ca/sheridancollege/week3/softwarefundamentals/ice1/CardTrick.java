@@ -1,36 +1,109 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
+
+import java.util.Scanner; 
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
+ * @Modifier Han Byul Moon
+ * Student ID: 991624436
+ * Date: February 9, 2021 
  */
 public class CardTrick {
     
-    //test merge 1234
-    
     public static void main(String[] args)
     {
+        //Array for 7 cards in the magic hand 
         Card[] magicHand = new Card[7];
         
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            c.setValue((int)(Math.random() * 13) + 1);
+            c.setSuit(Card.SUITS[(int)(Math.random() * 4)]);
             
-            //Here's a comment to test if the commit is working
+            magicHand[i] = c; 
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+        
+        //code to ask the user for Card value and suit
+        Scanner input = new Scanner(System.in); 
+        
+        //asking for card value
+        System.out.print("Enter a card value between 1 and 13. (Ace = 1 and King = 13): "); 
+        int userValue = input.nextInt(); 
+        while (userValue < 1 || userValue > 13) {
+            System.out.print("Invalid! Please enter a card value in between 1 and 13, where Ace = 1 and King = 13: ");
+            userValue = input.nextInt(); 
+        }
+        
+        //asking for suit
+        System.out.print("Enter a card suit (Hearts, Diamonds, Spades, or Clubs): ");
+        String userSuit = input.next(); 
+        while (!userSuit.equalsIgnoreCase("Hearts") 
+                && !userSuit.equalsIgnoreCase("Diamonds")
+                && !userSuit.equalsIgnoreCase("Spades")
+                && !userSuit.equalsIgnoreCase("Clubs")) {
+            
+            System.out.print("Invalid! Please enter a card suit (Hearts, Diamonds, Spades, or Clubs");
+            userSuit = input.next(); 
+        }
+        
+        
+        String displayName = ""; 
+        
+        switch (userValue) {
+            case 1:
+                displayName = "Ace";
+                break;
+            case 11:
+                displayName = "Jack";
+                break;
+            case 12: 
+                displayName = "Queen";
+                break;
+            case 13:
+                displayName = "King";
+                break;
+            default:
+                break;
+        }
+        
+        if (userValue == 1 || userValue > 10)
+            System.out.println("\nYou have chosen the " + displayName + " of " + userSuit + " as your card."); 
+        else
+            System.out.println("\nYou have chosen the " + userValue + " of " + userSuit + " as your card.");
+        
+        
+        //create user card
+        Card userCard = new Card();
+        userCard.setValue(userValue); 
+        userCard.setSuit(userSuit);
+        
+        
+        //search magicHand here
+        boolean isFound = false;
+        
+        for (int i = 0; i < magicHand.length; i++) {
+            System.out.println("The card number " + (i + 1) + " in the magic hand was: " + magicHand[i].getValue() + " of " + magicHand[i].getSuit());
+            if (userCard.getValue() == magicHand[i].getValue()) {
+                if (userCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit())){
+                    isFound = true; 
+                }    
+            }
+        }
+        
+        
+        //result here
+        
+        if (isFound) {
+            System.out.println("\nCongratulations! Your card is in the deck of magic hands! Today is your lucky day!\n");
+        } else {
+            System.out.println("\nUnlucky. Your card is not in the deck of magic hands. Try again!\n");
+        }
     }
     
 }
