@@ -29,6 +29,9 @@ public class CardTrick {
         }
         
         
+        
+        /* Comment out section asking user for values
+        
         //code to ask the user for Card value and suit
         Scanner input = new Scanner(System.in); 
         
@@ -83,18 +86,26 @@ public class CardTrick {
         userCard.setValue(userValue); 
         userCard.setSuit(userSuit);
         
+        */
+        
+        
+        //Create luckyCard 
+        Card luckyCard = new Card(); 
+        luckyCard.setValue(1);
+        luckyCard.setSuit("Spades"); 
         
         //search magicHand here
         boolean isFound = false;
         
+        //to check for the userCard instead, replace luckyCard with userCard in the for loop
         for (int i = 0; i < magicHand.length; i++) {
             System.out.println("The card number " + (i + 1) + " in the magic hand was: " + magicHand[i].getValue() + " of " + magicHand[i].getSuit());
-            if (userCard.getValue() == magicHand[i].getValue()) {
-                if (userCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit())){
+            if (luckyCard.getValue() == magicHand[i].getValue()) {
+                if (luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit())){
                     isFound = true; 
                 }    
             }
-        }
+        } 
         
         
         //result here
