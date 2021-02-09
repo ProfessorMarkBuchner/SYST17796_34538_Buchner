@@ -18,6 +18,12 @@ public class CardTrick {
     {
         Scanner input = new Scanner(System.in);
         
+        //new card object called luckyCard
+        Card luckyCard = new Card();
+        //assign data to luckyCard
+        luckyCard.setValue(2);
+        luckyCard.setSuit("spades");
+        
         //array for 7 cards magic hand
         Card[] magicHand = new Card[7];
         
