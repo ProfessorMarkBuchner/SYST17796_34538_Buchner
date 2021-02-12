@@ -5,16 +5,16 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
 * @author Bill Tang
 * Date Modified: Feb 12, 2021
 */
-public Class luckyCard
+public class luckyCard
 {
-private final static String SUIT = "Spades";
-private final static int value = 7;
-public string getLuckySuit(String SUIT)
-{
+    private final static String SUIT = "Spades";
+    private final static int value = 7;
+    public String getLuckySuit(String SUIT)
+    {
   return SUIT;
-}
-public int getLuckyValue(int value)
-{
-  return value;
-}
+    }
+    public int getLuckyValue(int value)
+    {
+    return value;
+    }
 }
